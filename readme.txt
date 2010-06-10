@@ -21,7 +21,7 @@ Make sure your Wordpress version is equal or greater than 2.8 and your hosting p
 2. Activate the plugin from the **Plugins** menu in WordPress Dashboard
 3. In the post editor use the following tag to embed the Dock Gallery: `[dock-gallery-fx width="500" height="350"][/dock-gallery-fx]`. Or add `<?php dockgalleryfx_echo_embed_code(500, 350); ?>` in your templates. Don't forget to provide your own width and height values, since 500 and 350 are just examples
 4. Go to [FlashXML.net](http://www.flashxml.net/ "Free Flash Components") and [customize your Dock Gallery](http://www.flashxml.net/dock-gallery.html "Dock Gallery") using the Live Demo. Generate the `settings.xml` text and use it to overwrite `dock-gallery-fx/gallery/settings.xml`, `dock-gallery-fx/gallery/dockMenu/settings.xml` and `dock-gallery-fx/gallery/holder/settings.xml` respectively
-5. To use your own images, upload them to the `dock-gallery-fx/gallery/images/big` and `dock-gallery-fx/gallery/images/big` folders and update the `dock-gallery-fx/gallery/images/thumbs.xml` and `dock-gallery-fx/gallery/images/big.xml` files accordingly
+5. To use your own images, upload them to the `dock-gallery-fx/gallery/images/thumbs` and `dock-gallery-fx/gallery/images/big` folders and update the `dock-gallery-fx/gallery/images/thumbs.xml` and `dock-gallery-fx/gallery/images/big.xml` files accordingly
 
 = No Flash support text =
 
