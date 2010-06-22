@@ -2,7 +2,7 @@
 Contributors: flashxml
 Tags: images, photos, widget, post, plugin, posts, sidebar, free, flash, dock, gallery, as3, thumb, effect, thumbs, image, full, screen, text, effects, animation, xml, tooltip, photos, roll, over, out, transition, auto, scroll, css
 Requires at least: 2.8.0
-Tested up to: 2.9.2
+Tested up to: 3.0
 Stable tag: trunk
 
 == Description ==
