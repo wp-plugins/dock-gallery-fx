@@ -23,7 +23,7 @@ Make sure your Wordpress version is greater than 2.8 and your hosting provider i
 4. Activate the plugin from the **Plugins** tab in **WordPress Dashboard**
 5. Go to **Dock Gallery FX** from the **Settings** tab and update the path in case you used a different one
 6. In the post editor use the following tag to embed the Dock Gallery FX: `[dock-gallery-fx width="600" height="400"][/dock-gallery-fx]`. You could also add `<?php dockgalleryfx_echo_embed_code(600, 400); ?>` in the PHP file of your theme. Don't forget to provide your own width and height values, since 600 and 400 are just examples
-7. Go to [FlashXML.net](http://www.flashxml.net/ "Free Flash Components") and [customize your Dock Gallery FX](http://www.flashxml.net/dock-gallery.html "Dock Gallery FX") using the Live Demo. Generate the `settings.xml` text and use it to overwrite `flashxml/dock-gallery-fx/settings.xml`
+7. Go to [FlashXML.net](http://www.flashxml.net/ "Free Flash Components") and [customize your Dock Gallery FX](http://www.flashxml.net/dock-gallery.html "Dock Gallery FX") using the Live Demo. Generate the `settings.xml` text and use it to overwrite `flashxml/dock-gallery-fx/settings.xml`, `flashxml/dock-gallery-fx/dockMenu/settings.xml` and `flashxml/dock-gallery-fx/holder/settings.xml` files accordingly
 8. To use your own images, upload them to the `flashxml/dock-gallery-fx/images` folder and update the `flashxml/dock-gallery-fx/images/thumb.xml` and `flashxml/dock-gallery-fx/images/big.xml` files accordingly
 
 = No Flash support text =
