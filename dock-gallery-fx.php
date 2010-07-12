@@ -2,15 +2,16 @@
 /*
 Plugin Name: Dock Gallery FX
 Plugin URI: http://www.flashxml.net/dock-gallery.html
-Description: An original "Dock Gallery". Completely XML customizable, without using Flash. And it's free!
-Version: 0.1.7
+Description: Short description:
+An original "Dock Gallery". Completely XML customizable, without using Flash. And it's free!
+Version: 0.2.0
 Author: FlashXML.net
 Author URI: http://www.flashxml.net/
 License: GPL2
 */
 
+/* start client side functions */
 	function dockgalleryfx_get_embed_code($dockgalleryfx_attributes) {
-		$plugin_dir = basename(dirname(__FILE__));
 		$width = (int)$dockgalleryfx_attributes[1];
 		$height = (int)$dockgalleryfx_attributes[2];
 
@@ -18,11 +19,17 @@ License: GPL2
 			return '';
 		}
 
+		$plugin_dir = get_option('dockgalleryfx_path');
+		if ($plugin_dir === false) {
+			$plugin_dir = 'flashxml/dock-gallery-fx';
+		}
+		$plugin_dir = trim($plugin_dir, '/');
+
 		$swf_embed = array(
 			'width' => $width,
 			'height' => $height,
 			'text' => trim($dockgalleryfx_attributes[3]),
-			'gallery_path' => WP_PLUGIN_URL."/{$plugin_dir}/gallery/",
+			'gallery_path' => WP_CONTENT_URL . "/{$plugin_dir}/",
 			'swf_name' => 'gallery.swf',
 		);
 		$swf_embed['swf_path'] = $swf_embed['gallery_path'].$swf_embed['swf_name'];
@@ -61,8 +68,49 @@ License: GPL2
 	function dockgalleryfx_load_swfobject_lib() {
 		wp_enqueue_script('swfobject');
 	}
+/* end client side functions */
 
+/* start admin section functions */
+	function dockgalleryfx_admin_menu() {
+		add_options_page('Dock Gallery FX Options', 'Dock Gallery FX', 'manage_options', 'dockgalleryfx', 'dockgalleryfx_admin_options');
+	}
+
+	function dockgalleryfx_admin_options() {
+	  if (!current_user_can('manage_options'))  {
+				wp_die(__('You do not have sufficient permissions to access this page.'));
+		}
+
+	  $dockgalleryfx_default_path = get_option('dockgalleryfx_path');
+	  if ($dockgalleryfx_default_path === false) {
+	  	$dockgalleryfx_default_path = 'flashxml/dock-gallery-fx';
+	  }
+?>
+<div class="wrap">
+	<h2>Dock Gallery FX</h2>
+	<form method="post" action="options.php">
+		<?php wp_nonce_field('update-options'); ?>
+
+		<table class="form-table">
+			<tr valign="top">
+				<th scope="row" style="width: 40em;">SWF and assets path is <?php echo WP_CONTENT_DIR; ?>/</th>
+				<td><input type="text" style="width: 25em;" name="dockgalleryfx_path" value="<?php echo $dockgalleryfx_default_path; ?>" /></td>
+			</tr>
+		</table>
+		<input type="hidden" name="action" value="update" />
+		<input type="hidden" name="page_options" value="dockgalleryfx_path" />
+		<p class="submit">
+			<input type="submit" class="button-primary" value="<?php _e('Save Changes') ?>" />
+		</p>
+	</form>
+</div>
+<?php
+	}
+/* end admin section functions */
+
+/* start hooks */
 	add_filter('the_content', 'dockgalleryfx_filter_content');
 	add_action('init', 'dockgalleryfx_load_swfobject_lib');
+	add_action('admin_menu', 'dockgalleryfx_admin_menu');
+/* end hooks */
 
 ?>
