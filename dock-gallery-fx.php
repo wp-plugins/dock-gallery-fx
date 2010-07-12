@@ -2,8 +2,7 @@
 /*
 Plugin Name: Dock Gallery FX
 Plugin URI: http://www.flashxml.net/dock-gallery.html
-Description: Short description:
-An original "Dock Gallery". Completely XML customizable, without using Flash. And it's free!
+Description: An original "Dock Gallery". Completely XML customizable, without using Flash. And it's free!
 Version: 0.2.0
 Author: FlashXML.net
 Author URI: http://www.flashxml.net/
