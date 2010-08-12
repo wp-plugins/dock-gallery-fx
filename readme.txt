@@ -2,7 +2,7 @@
 Contributors: flashxml
 Tags: images, photos, widget, post, plugin, posts, sidebar, free, flash, dock, gallery, as3, thumb, effect, thumbs, image, full, screen, text, effects, animation, xml, tooltip, roll, over, out, transition, auto, scroll, css
 Requires at least: 2.8.0
-Tested up to: 3.0
+Tested up to: 3.0.1
 Stable tag: trunk
 
 == Description ==
@@ -17,18 +17,21 @@ You can integrate it in any website for free without even using Flash. The overa
 
 Make sure your Wordpress version is greater than 2.8 and your hosting provider is using PHP5.
 
-1. [Download](http://www.flashxml.net/free/download/dock-gallery.zip "Dock Gallery FX") or [purchase](http://www.flashxml.net/dock-gallery.html#swmi-license "Dock Gallery FX") the Dock Gallery FX Flash component
-2. Create a new folder inside your `/wp-content/` directory called `flashxml/dock-gallery-fx` and copy the content of the archive to this folder
-3. Install [the plugin](http://downloads.wordpress.org/plugin/dock-gallery-fx.zip "Dock Gallery FX Plugin") or upload the `dock-gallery-fx` folder along with all its files to `/wp-content/plugins/` directory
-4. Activate the plugin from the **Plugins** tab in **WordPress Dashboard**
-5. Go to **Dock Gallery FX** from the **Settings** tab and update the path in case you used a different one
-6. In the post editor use the following tag to embed the Dock Gallery FX: `[dock-gallery-fx width="600" height="400"][/dock-gallery-fx]`. You could also add `<?php dockgalleryfx_echo_embed_code(600, 400); ?>` in the PHP file of your theme. Don't forget to provide your own width and height values, since 600 and 400 are just examples
-7. Go to [FlashXML.net](http://www.flashxml.net/ "Free Flash Components") and [customize your Dock Gallery FX](http://www.flashxml.net/dock-gallery.html "Dock Gallery FX") using the Live Demo. Generate the `settings.xml` text and use it to overwrite `flashxml/dock-gallery-fx/settings.xml`, `flashxml/dock-gallery-fx/dockMenu/settings.xml` and `flashxml/dock-gallery-fx/holder/settings.xml` files accordingly
-8. To use your own images, upload them to the `flashxml/dock-gallery-fx/images` folder and update the `flashxml/dock-gallery-fx/images/thumb.xml` and `flashxml/dock-gallery-fx/images/big.xml` files accordingly
+1. There are two files to download: [WordPress Plugin](http://downloads.wordpress.org/plugin/dock-gallery-fx.zip "Dock Gallery FX Plugin") (that you have to install and activate) & [Free archive](http://www.flashxml.net/free/download/dock-gallery.zip "Dock Gallery FX")
+2. Create a new folder inside your **wp-content** folder called **flashxml**, inside this folder create a new one called **dock-gallery-fx** and copy the content of the **free archive** there
+3. If you copied the **free archive** to a location different than the one above, go to **Dock Gallery FX** from the **Settings** tab in your **WordPress Dashboard** and update the path accordingly
+4. Add `[dock-gallery-fx width="600" height="400"][/dock-gallery-fx]` where you want the Flash to show up in your post/page. Don't forget to provide your own width and height values, since 600 and 400 are just examples
+5. If you want to make the Dock Gallery FX part of your theme, edit the template files and add `<?php dockgalleryfx_echo_embed_code(600, 400); ?>` where you want it to show up
+6. Go to [FlashXML.net](http://www.flashxml.net/ "Free Flash Components") and [customize your Dock Gallery FX](http://www.flashxml.net/dock-gallery.html "Dock Gallery FX") using the Live Demo. Generate the `settings.xml` text and use it to overwrite `wp-content/flashxml/dock-gallery-fx/settings.xml`, `wp-content/flashxml/dock-gallery-fx/dockMenu/settings.xml` and `wp-content/flashxml/dock-gallery-fx/holder/settings.xml` files accordingly
+7. To use your own images, upload them to `wp-content/flashxml/dock-gallery-fx/images/` and update the `wp-content/flashxml/dock-gallery-fx/images/thumbs.xml` and `wp-content/flashxml/dock-gallery-fx/images/big.xml` files accordingly
 
 = No Flash support text =
 
-To support visitors without Adobe Flash, you can provide alternative textual content. From the post editor, add the text between `[dock-gallery-fx]` and `[/dock-gallery-fx]`. From the PHP files of your theme, add the text as *the third argument* of the `dockgalleryfx_echo_embed_code()` function call.
+To support visitors without Adobe Flash Player, you can provide alternative content by adding the text between `[dock-gallery-fx width="600" height="400"]` and `[/dock-gallery-fx]`. If you made the Flash part of your theme, add the text as *the third argument* of the `dockgalleryfx_echo_embed_code()` function call (for example `<?php dockgalleryfx_echo_embed_code(600,400,"Alternative content"); ?>`).
+
+= Getting rid of the FlashXML.net label =
+
+To remove the FlashXML.net label from the top-left corner you'll need to buy the [commercial archive](http://www.flashxml.net/dock-gallery.html#swmi-license "Dock Gallery FX"). Once you'll do that, simply use the SWF file from the commercial archive to overwrite the SWF file from the `wp-content/flashxml/dock-gallery-fx/` folder.
 
 == Screenshots ==
 
