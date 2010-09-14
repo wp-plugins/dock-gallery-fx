@@ -3,7 +3,7 @@
 Plugin Name: Dock Gallery FX
 Plugin URI: http://www.flashxml.net/dock-gallery.html
 Description: An original "Dock Gallery". Completely XML customizable, without using Flash. And it's free!
-Version: 0.2.6
+Version: 0.2.7
 Author: FlashXML.net
 Author URI: http://www.flashxml.net/
 License: GPL2
@@ -29,7 +29,7 @@ License: GPL2
 			'height' => $height,
 			'text' => trim($dockgalleryfx_attributes[3]),
 			'gallery_path' => WP_CONTENT_URL . "/{$plugin_dir}/",
-			'swf_name' => 'gallery.swf',
+			'swf_name' => 'DockGallery.swf',
 		);
 		$swf_embed['swf_path'] = $swf_embed['gallery_path'].$swf_embed['swf_name'];
 
