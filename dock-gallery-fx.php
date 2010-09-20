@@ -29,7 +29,7 @@ License: GPL2
 			'height' => $height,
 			'text' => trim($dockgalleryfx_attributes[3]),
 			'gallery_path' => WP_CONTENT_URL . "/{$plugin_dir}/",
-			'swf_name' => 'DockGallery.swf',
+			'swf_name' => 'DockGalleryFX.swf',
 		);
 		$swf_embed['swf_path'] = $swf_embed['gallery_path'].$swf_embed['swf_name'];
 
