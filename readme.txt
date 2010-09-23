@@ -5,11 +5,9 @@ Requires at least: 2.8.0
 Tested up to: 3.0.1
 Stable tag: trunk
 
-== Description ==
-
 An original "Dock Gallery". Completely XML customizable, without using Flash. And it's free!
 
-= Main features =
+== Description ==
 
 You can integrate it in any website for free without even using Flash. The overall width and height can be customized up to 1680 x 1050 pixels. It's fully customizable and uses the Dock Menu FX component, keeping the same many customizable variables of the menu and adding many gallery properties, text effects and image transitions. You can place the dock menu on any position over the gallery, and you can have it hidden on mouse out. You can configure your XML list of text effects and image transitions. The images in the gallery can be shown according to boxFit, bestFit or forceFit options. The specific properties from the Dock Menu FX like thumbs spacing, scrolling speed, mouse over behaviors and HTML-CSS formatted tooltip are also available.
 
