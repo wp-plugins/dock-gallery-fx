@@ -15,12 +15,12 @@ You can integrate it in any website for free without even using Flash. The overa
 
 Make sure your Wordpress version is greater than 2.8 and your hosting provider is using PHP5.
 
-1. There are two files to download: [WordPress Plugin](http://downloads.wordpress.org/plugin/dock-gallery-fx.zip "Dock Gallery FX Plugin") (that you have to install and activate) & [Free archive](http://www.flashxml.net/free/download/dock-gallery.zip "Dock Gallery FX")
-2. Create a new folder inside your **wp-content** folder called **flashxml**, inside this folder create a new one called **dock-gallery-fx** and copy the content of the **free archive** there
-3. If you copied the **free archive** to a location different than the one above, go to **Dock Gallery FX** from the **Settings** tab in your **WordPress Dashboard** and update the path accordingly
+1. There are two files to download: [WordPress Plugin](http://downloads.wordpress.org/plugin/dock-gallery-fx.zip "Dock Gallery FX Plugin") (that you have to install and activate) & [Free package](http://www.flashxml.net/free/download/dock-gallery.zip "Dock Gallery FX")
+2. Create a new folder inside your **wp-content** folder called **flashxml**, inside this folder create a new one called **dock-gallery-fx** and copy the content of the **free package** there
+3. If you copied the **free package** to a location different than the one above, go to **Dock Gallery FX** from the **Settings** tab in your **WordPress Dashboard** and update the path accordingly
 4. Add `[dock-gallery-fx width="600" height="400"][/dock-gallery-fx]` where you want the Flash to show up in your post/page. Don't forget to provide your own width and height values, since 600 and 400 are just examples
 5. If you want to make the Dock Gallery FX part of your theme, edit the template files and add `<?php dockgalleryfx_echo_embed_code(600, 400); ?>` where you want it to show up
-6. Go to [FlashXML.net](http://www.flashxml.net/ "Free Flash Components") and [customize your Dock Gallery FX](http://www.flashxml.net/dock-gallery.html "Dock Gallery FX") using the Live Demo. Generate the `settings.xml` text and use it to overwrite `wp-content/flashxml/dock-gallery-fx/settings.xml`, `wp-content/flashxml/dock-gallery-fx/dockMenu/settings.xml` and `wp-content/flashxml/dock-gallery-fx/holder/settings.xml` files accordingly
+6. Go to [FlashXML.net](http://www.flashxml.net/ "Free Flash Components") and [customize your Dock Gallery FX](http://www.flashxml.net/dock-gallery.html "Dock Gallery FX") using the Live Demo. Generate the `settings.xml` text and use it to overwrite `wp-content/flashxml/dock-gallery-fx/settings.xml`, `wp-content/flashxml/dock-gallery-fx/navigator/settings.xml` and `wp-content/flashxml/dock-gallery-fx/holder/settings.xml` files accordingly
 7. To use your own images, upload them to `wp-content/flashxml/dock-gallery-fx/images/` and update the `wp-content/flashxml/dock-gallery-fx/images/thumbs.xml` and `wp-content/flashxml/dock-gallery-fx/images/big.xml` files accordingly
 
 = No Flash support text =
@@ -29,7 +29,7 @@ To support visitors without Adobe Flash Player, you can provide alternative cont
 
 = Getting rid of the FlashXML.net label =
 
-To remove the FlashXML.net label from the top-left corner you'll need to buy the [commercial archive](http://www.flashxml.net/dock-gallery.html#swmi-license "Dock Gallery FX"). Once you'll do that, simply use the SWF file from the commercial archive to overwrite the SWF file from the `wp-content/flashxml/dock-gallery-fx/` folder.
+To remove the FlashXML.net label from the top-left corner you'll need to buy the [paid package](http://www.flashxml.net/dock-gallery.html#swmi-license "Dock Gallery FX"). Once you'll do that, simply use the SWF file from the paid package to overwrite the SWF file from the `wp-content/flashxml/dock-gallery-fx/` folder.
 
 == Screenshots ==
 
