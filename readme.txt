@@ -25,12 +25,16 @@ Make sure your Wordpress version is greater than 2.8 and your hosting provider i
 
 = No Flash support text =
 
-To support visitors without Adobe Flash Player, you can provide alternative content by adding the text between `[dock-gallery-fx width="600" height="400"]` and `[/dock-gallery-fx]`. If you made the Flash part of your theme, add the text as *the third argument* of the `dockgalleryfx_echo_embed_code()` function call (for example `<?php dockgalleryfx_echo_embed_code(600,400,"Alternative content"); ?>`).
+To support visitors without Adobe Flash Player, you can provide alternative content by adding the text between `[dock-gallery-fx width="600" height="400"]` and `[/dock-gallery-fx]`. If you made the Flash part of your theme, add the text as **the third argument** of the `dockgalleryfx_echo_embed_code()` function call (for example `<?php dockgalleryfx_echo_embed_code(600,400,"Alternative content"); ?>`).
+
+= Additional settings file =
+
+To embed the Dock Gallery FX more than once, you will need another set of settings file and (probably) another set of images. Let's assume your new files are called `settings2.xml`. Add `[dock-gallery-fx width="600" height="400" settings="settings2.xml"][/dock-gallery-fx]` where you want the Flash to show up in your post/page. If you made the Flash part of your theme, add the file name as **the fourth argument** of the `dockgalleryfx_echo_embed_code()` function call (for example `<php dockgalleryfx_echo_embed_code(600,400,"Alternative content","settings2.xml"); >`).
 
 = Getting rid of the FlashXML.net label =
 
-To remove the FlashXML.net label from the top-left corner you'll need to buy the [paid package](http://www.flashxml.net/dock-gallery.html#swmi-license "Dock Gallery FX"). Once you'll do that, simply use the SWF file from the paid package to overwrite the SWF file from the `wp-content/flashxml/dock-gallery-fx/` folder.
+To remove the FlashXML.net label from the top-left corner you'll need to buy the [paid package](http://www.flashxml.net/dock-gallery.html" Dock Gallery FX"). Once you'll do that, simply use the SWF file from the paid package to overwrite the SWF file from the `wp-content/flashxml/dock-gallery-fx/` folder.
 
 == Screenshots ==
 
-1. The Live Demo on [FlashXML.net](http://www.flashxml.net/dock-gallery.html "Dock Gallery") is the utility that helps easily customize your Dock Gallery to fit all of your needs.
+1. The Live Demo on [FlashXML.net](http://www.flashxml.net/dock-gallery.html "Dock Gallery FX") is the utility that helps easily customize your Dock Gallery FX to fit all your needs.
